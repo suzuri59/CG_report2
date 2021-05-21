@@ -33,8 +33,8 @@
     var material = new THREE.MeshNormalMaterial();
     var box = new THREE.Mesh(geometry, material);
     var box2 = new THREE.Mesh(geometry, material);
-    box.position.set( 1.3, 0, -5 );
-    box2.position.set( -1.3, 0, -5 );
+    box.position.set( 2, 0, -5 );
+    box2.position.set( -2, 0, -5 );
     scene.add(box);
     scene.add(box2);
     
@@ -65,8 +65,8 @@
       box.rotation.x += 0.1;
       box.rotation.y += 0.05;
       
-      box2.rotation.x += 0.5;
-      box2.rotation.y += 0.01;
+      box2.rotation.x += 0.05;
+      box2.rotation.y += 0.1;
   
       renderer.render(scene, camera);
     };
