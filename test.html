@@ -32,24 +32,17 @@
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     //マテリアル
     var box1material = new THREE.MeshNormalMaterial();
-    //メッシュ作成
-    var box = new THREE.Mesh(geometry, box1material);　//箱１
-    box.position.set( 2, 0, -5 );
-    scene.add(box);    //シーンに追加
-    
-    //マテリアル
     var box2material = new THREE.MeshBasicMaterial({color: 0x33cccc});
+    //メッシュ作成
+    var box1 = new THREE.Mesh(geometry, box1material);　//箱１
     var box2 = new THREE.Mesh(geometry, box2material);//箱２
+    //位置
+    box1.position.set( 2, 0, -5 );
     box2.position.set( -2, 0, -5 );
+    //シーンに追加
+    scene.add(box1);    
     scene.add(box2);
     
-//     // 箱を作成
-//     var geometry = new THREE.BoxGeometry(1, 1, 1);
-//     var material = new THREE.MeshNormalMaterial();
-//     var box = new THREE.Mesh(geometry, material);
-//     box.position.z = -30;
-//     scene.add(box);
-  
     // 平行光源1
     var directionalLight = new THREE.DirectionalLight(0xffffff);
     directionalLight.position.set(1, 1, 1);
@@ -67,8 +60,8 @@
       requestAnimationFrame(update);
   
       // 箱を回転させる
-      box.rotation.x += 0.1;
-      box.rotation.y += 0.05;
+      box1.rotation.x += 0.1;
+      box1.rotation.y += 0.05;
       
       box2.rotation.x += 0.05;
       box2.rotation.y += 0.1;
