@@ -34,12 +34,13 @@
     var material = new THREE.MeshNormalMaterial();
     //メッシュ作成
     var box = new THREE.Mesh(geometry, material);　//箱１
-    var box2 = new THREE.Mesh(geometry, material);//箱２
-    //位置
     box.position.set( 2, 0, -5 );
+    scene.add(box);    //シーンに追加
+    
+    //マテリアル
+    var material = new THREE.MeshBasicMaterial({color: 0x33cccc});
+    var box2 = new THREE.Mesh(geometry, material);//箱２
     box2.position.set( -2, 0, -5 );
-    //シーンに追加
-    scene.add(box);
     scene.add(box2);
     
 //     // 箱を作成
