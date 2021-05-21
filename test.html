@@ -32,7 +32,7 @@
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     //マテリアル
     var box1material = new THREE.MeshNormalMaterial();
-    var box2material = new THREE.MeshPhongMaterial({color: 0x33cccc});
+    var box2material = new THREE.MeshPhongMaterial({color: 0x33ccccf, wireframe: true});
     //メッシュ作成
     var box1 = new THREE.Mesh(geometry, box1material);　//箱１
     var box2 = new THREE.Mesh(geometry, box2material);//箱２
