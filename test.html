@@ -32,15 +32,19 @@
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     //マテリアル
     var box1material = new THREE.MeshNormalMaterial();
-    var box2material = new THREE.MeshPhongMaterial({color: 0x33ccccf, wireframe: true});
+    var box2material = new THREE.MeshPhongMaterial({color: 0x33ccccf});
+    var box3material = new THREE.MeshPhongMaterial({color: 0x33ccccf, wireframe: true});
     //メッシュ作成
     var box1 = new THREE.Mesh(geometry, box1material);　//箱１
     var box2 = new THREE.Mesh(geometry, box2material);//箱２
+    var box3 = new THREE.Mesh(geometry, box3material);//箱3
     //位置
     box1.position.set( 2, 0, -7 );
     box2.position.set( -2, 0, -7 );
+    box3.position.set( 0, 2, -7 );
     //シーンに追加
     scene.add(box1);    
+    scene.add(box2);
     scene.add(box2);
     
     // 平行光源1
