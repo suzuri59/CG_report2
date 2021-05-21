@@ -32,10 +32,10 @@
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     //マテリアル
     var material = new THREE.MeshNormalMaterial();
-    var material2 = new THREE.MeshLambertlMaterial({color: 0xFF0000});
+//     var material2 = new THREE.MeshLambertlMaterial({color: 0xFF0000});
     //メッシュ作成
     var box = new THREE.Mesh(geometry, material);　//箱１
-    var box2 = new THREE.Mesh(geometry, material2);//箱２
+    var box2 = new THREE.Mesh(geometry, material);//箱２
     //位置
     box.position.set( 2, 0, -7 );
     box2.position.set( -2, 0, -7 );
