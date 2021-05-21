@@ -35,7 +35,7 @@
     var box2material = new THREE.MeshPhongMaterial({color: 0x33ccccf});
     var box3material = new THREE.MeshPhongMaterial({color: 0x33ccccf, wireframe: true});
     var box4material = new THREE.MeshLambertMaterial({color: 0xffccff});
-    var box5material = new THREE.MeshNormaltMaterial({color: 0x99ffcc});
+    var box5material = new THREE.MeshBasicMaterial({color: 0x6699ff});
     
     //メッシュ作成
     var box1 = new THREE.Mesh(geometry, box1material);　//箱１
@@ -49,13 +49,13 @@
     box2.position.set( -2.8, 0, -7 );
     box3.position.set( 0, 2, -7 );
     box4.position.set( 0, 0, -7 );
-//     box5.position.set( 0, -2, -7 );
+    box5.position.set( 0, -2, -7 );
     //シーンに追加
     scene.add(box1);    
     scene.add(box2);
     scene.add(box3);
     scene.add(box4);
-//     scene.add(box5);
+    scene.add(box5);
     
     // 平行光源1
     var directionalLight = new THREE.DirectionalLight(0xffffff);
