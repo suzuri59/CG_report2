@@ -49,13 +49,13 @@
     box2.position.set( -2.8, 0, -7 );
     box3.position.set( 0, 2, -7 );
     box4.position.set( 0, 0, -7 );
-    box5.position.set( 0, -2, -7 );
+//     box5.position.set( 0, -2, -7 );
     //シーンに追加
     scene.add(box1);    
     scene.add(box2);
     scene.add(box3);
     scene.add(box4);
-    scene.add(box5);
+//     scene.add(box5);
     
     // 平行光源1
     var directionalLight = new THREE.DirectionalLight(0xffffff);
@@ -86,7 +86,7 @@
       box4.rotation.x += 0.05;
       box4.rotation.z += 0.05;
       
-      box5.rotation.y += 0.05;
+      box5.rotation.x += 0.05;
       box5.rotation.z += 0.05;
   
       renderer.render(scene, camera);
