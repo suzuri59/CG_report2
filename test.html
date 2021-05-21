@@ -31,7 +31,7 @@
     // 箱を作成
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     //角柱円柱を作成
-    var cylinderGeometry = new THREE.CylinderGeometry( 0.3, 0.5, 1, 5 );
+    var cylinderGeometry = new THREE.CylinderGeometry( 0.3, 0.5, 0.8, 5 );
     //マテリアル
     var box1material = new THREE.MeshNormalMaterial();
     var box2material = new THREE.MeshPhongMaterial({color: 0x33ccccf});
@@ -54,7 +54,7 @@
     box3.position.set( 0, 2, -7 );
     box4.position.set( 0, 0, -7 );
     box5.position.set( 0, -2, -7 );
-    cylinder.position.set( 2.8, 2, -5 );
+    cylinder.position.set( 2.8, 2, -7 );
     //シーンに追加
     scene.add(box1);    
     scene.add(box2);
