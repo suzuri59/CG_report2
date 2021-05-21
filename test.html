@@ -34,18 +34,22 @@
     var box1material = new THREE.MeshNormalMaterial();
     var box2material = new THREE.MeshPhongMaterial({color: 0x33ccccf});
     var box3material = new THREE.MeshPhongMaterial({color: 0x33ccccf, wireframe: true});
+    var box4material = new THREE.MeshLambertMaterial({color: 0xffccff});
     //メッシュ作成
     var box1 = new THREE.Mesh(geometry, box1material);　//箱１
     var box2 = new THREE.Mesh(geometry, box2material);//箱２
     var box3 = new THREE.Mesh(geometry, box3material);//箱3
+    var box4 = new THREE.Mesh(geometry, box4material);//箱4
     //位置
     box1.position.set( 2.8, 0, -7 );
     box2.position.set( -2.8, 0, -7 );
     box3.position.set( 0, 2, -7 );
+    box4.position.set( 0, -2, -7 );
     //シーンに追加
     scene.add(box1);    
     scene.add(box2);
     scene.add(box3);
+    scene.add(box4);
     
     // 平行光源1
     var directionalLight = new THREE.DirectionalLight(0xffffff);
@@ -72,6 +76,9 @@
       
       box3.rotation.x += 0.05;
       box3.rotation.y += 0.05;
+      
+      box4.rotation.x += 0.05;
+      box4.rotation.y += 0.05;
   
       renderer.render(scene, camera);
     };
