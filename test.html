@@ -31,15 +31,15 @@
     // 箱を作成
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     //マテリアル
-    var material = new THREE.MeshNormalMaterial();
+    var box1material = new THREE.MeshNormalMaterial();
     //メッシュ作成
-    var box = new THREE.Mesh(geometry, material);　//箱１
+    var box = new THREE.Mesh(geometry, box1material);　//箱１
     box.position.set( 2, 0, -5 );
     scene.add(box);    //シーンに追加
     
     //マテリアル
-    var material = new THREE.MeshBasicMaterial({color: 0x33cccc});
-    var box2 = new THREE.Mesh(geometry, material);//箱２
+    var box2material = new THREE.MeshBasicMaterial({color: 0x33cccc});
+    var box2 = new THREE.Mesh(geometry, box2material);//箱２
     box2.position.set( -2, 0, -5 );
     scene.add(box2);
     
