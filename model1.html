@@ -30,11 +30,16 @@
   
     // 箱を作成
     var geometry = new THREE.BoxGeometry(1, 1, 1);
+    //マテリアル
     var material = new THREE.MeshNormalMaterial();
-    var box = new THREE.Mesh(geometry, material);
-    var box2 = new THREE.Mesh(geometry, material);
-    box.position.set( 2, 0, -5 );
-    box2.position.set( -2, 0, -5 );
+    var material2 = new THREE.MeshLambertlMaterial({color: 0xFF0000});
+    //メッシュ作成
+    var box = new THREE.Mesh(geometry, material);　//箱１
+    var box2 = new THREE.Mesh(geometry, material2);//箱２
+    //位置
+    box.position.set( 2, 0, -7 );
+    box2.position.set( -2, 0, -7 );
+    //シーンに追加
     scene.add(box);
     scene.add(box2);
     
