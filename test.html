@@ -46,7 +46,7 @@
     var box3 = new THREE.Mesh(geometry, box3material);//箱3
     var box4 = new THREE.Mesh(geometry, box4material);//箱4
     var box5 = new THREE.Mesh(geometry, box5material);//箱5
-    var cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial ); //角柱
+//  var cylinder = new THREE.Mesh(cylinderGeometry, cylinderMaterial ); //角柱
 
     //位置
     box1.position.set( 2.8, 0, -7 );
@@ -54,14 +54,14 @@
     box3.position.set( 0, 2, -7 );
     box4.position.set( 0, 0, -7 );
     box5.position.set( 0, -2, -7 );
-    cylinder.position.set( 2.3, -2, -5 );
+//     cylinder.position.set( 2.3, -2, -5 );
     //シーンに追加
     scene.add(box1);    
     scene.add(box2);
     scene.add(box3);
     scene.add(box4);
     scene.add(box5);
-    scene.add( cylinder );
+//     scene.add( cylinder );
     
     // 平行光源1
     var directionalLight = new THREE.DirectionalLight(0xffffff);
